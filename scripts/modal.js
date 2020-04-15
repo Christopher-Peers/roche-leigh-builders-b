@@ -10,3 +10,10 @@ function openModal(thing) {
 	overlay.style.visibility = 'visible';
 	about.classList.toggle('about--visible');
 }
+
+function closeModal() {
+	
+	overlay.style.visibility = 'hidden';
+	about.classList.toggle('about--visible');
+	contentWrapper.classList.toggle('content-wrapper--hidden');
+}
