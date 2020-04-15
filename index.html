@@ -8,8 +8,17 @@
 </head>
 <body>
 
-	<div class="screen-overlay"></div>
+	<div class="screen-overlay" id="overlay">
 
+		<div class="about">
+			<h1>Stuff</h1>
+		</div>
+
+	</div>
+	<div class="background-image">
+		<div class="background-image__overlay"></div>
+	</div>
+	
 	<div class="content-wrapper">
 
 		<div class="logo-wrapper">
@@ -35,14 +44,19 @@
 
 		<div class="navigation-links">
 
-			<button class="navigation-link">ABOUT</button>
-			<button class="navigation-link">RECENT WORK</button>
+			<button class="navigation-link" onclick="openModal('about')">ABOUT</button>
+			<button class="navigation-link" onclick="openModal('recent-work')">RECENT WORK</button>
 			<button class="navigation-link">OUR SERVICES</button>
 			<button class="navigation-link">CONTACT</button>
 
 		</div>
 
 	</div>
+
+
+
 	
+	
+	<script src="./scripts/modal.js"></script>
 </body>
 </html>
