@@ -11,21 +11,37 @@
 	<div class="screen-overlay" id="overlay">
 
 		<div class="about">
-			<button class="about__close-button" onclick="closeModal()">X</button>
-			<h2>ABOUT US</h2>
-			<img class="about__image helper-spacing__general" src="./images/person-holding-grinder.jpg" alt="">
-			<p class="helper-spacing__general">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorem ducimus, asperiores sapiente laboriosam sint ipsum harum tenetur et temporibus 
-				quod odio, nisi ipsam illo adipisci atque animi amet perferendis? Perspiciatis fugit natus commodi ut? Laborum, sapiente fuga! Dolores delectus fuga, 
-				porro cupiditate ratione voluptatem deserunt facere molestiae saepe distinctio!
-			</p>
-			<p class="helper-spacing__general">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, iusto laborum itaque eum accusamus saepe, culpa, vero labore ipsa neque aliquam voluptate 
-				earum molestias amet. Error sunt natus fugiat dolor non labore voluptas distinctio libero corporis iure! Dolorem harum error ex in deserunt tempora cumque 
-				voluptate accusamus reiciendis veniam, aperiam placeat ratione numquam quia nostrum sit molestiae voluptates laboriosam dolor magni aliquid illum! Optio repellat 
-				corrupti dolores nisi quaerat modi, odit ipsam dolorum quam aliquam accusantium iure libero similique vel ducimus aut alias natus eos animi fugiat magnam expedita. 
-				Quibusdam?
-			</p>
+
+			<div class="about__close-button-wrapper">
+				
+				<button class="about__close-button" onclick="closeModal()">
+					<svg viewBox="0 0 40 40" width="15px" height="15px">
+						<line x1="0" y1="40" x2="40" y2="0" stroke="white" stroke-width="2"></line>
+						<line x1="0" y1="0" x2="40" y2="40" stroke="white" stroke-width="2"></line>
+					</svg>
+				</button>
+
+			</div>
+
+			<div class="about__description-wrapper">
+
+				<h2 class="about__title">ABOUT US</h2>
+				<img class="about__image helper-spacing__general" src="./images/person-holding-grinder.jpg" alt="">
+				<p class="helper-spacing__general">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorem ducimus, asperiores sapiente laboriosam sint ipsum harum tenetur et temporibus 
+					quod odio, nisi ipsam illo adipisci atque animi amet perferendis? Perspiciatis fugit natus commodi ut? Laborum, sapiente fuga! Dolores delectus fuga, 
+					porro cupiditate ratione voluptatem deserunt facere molestiae saepe distinctio!
+				</p>
+				<p class="helper-spacing__general">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, iusto laborum itaque eum accusamus saepe, culpa, vero labore ipsa neque aliquam voluptate 
+					earum molestias amet. Error sunt natus fugiat dolor non labore voluptas distinctio libero corporis iure! Dolorem harum error ex in deserunt tempora cumque 
+					voluptate accusamus reiciendis veniam, aperiam placeat ratione numquam quia nostrum sit molestiae voluptates laboriosam dolor magni aliquid illum! Optio repellat 
+					corrupti dolores nisi quaerat modi, odit ipsam dolorum quam aliquam accusantium iure libero similique vel ducimus aut alias natus eos animi fugiat magnam expedita. 
+					Quibusdam?
+				</p>
+	
+			</div>
+		
 		</div>
 
 	</div>
@@ -41,7 +57,7 @@
 	</div>
 
 	
-	<div class="content-wrapper">
+	<div class="content-wrapper fade-in">
 
 		<div class="logo-wrapper">
 
@@ -58,7 +74,9 @@
 		<div class="company-intro">
 
 			<h1>ROCHE LEIGH</h1>
-			<p class="company-intro__description helper-spacing__paragraph">A construction company you can trust. With over 20 years experience Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, quibusdam.</p>
+			<p class="company-intro__description helper-spacing__paragraph">
+				A construction company you can trust. With over 20 years experience in the construction industry we pride ourselves on our attention to detail, customer service and getting the job done in a timescale that suits you.
+			</p>
 	
 		</div>
 

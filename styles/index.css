@@ -1,5 +1,6 @@
 @import url('./typography.css');
 @import url('./helpers.css');
+@import url('./animations.css');
 
 body {
 	align-items: center;
@@ -45,6 +46,7 @@ body {
 	visibility: hidden;
 	width: 100vw;
 	z-index: 1;
+	overflow: hidden;
 }
 
 .content-wrapper {
@@ -52,7 +54,7 @@ body {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	opacity: 1;
+	opacity: 0;
 	overflow: auto;
 	padding: 1rem;
 	position: absolute;
@@ -73,8 +75,8 @@ body {
 }
 
 .logo {
-	height: 35px;
-	width: 35px;
+	height: 1.5rem;
+	width: 1.5rem;
 }
 
 .company-intro {
@@ -87,10 +89,11 @@ body {
 .company-intro__description {
 	letter-spacing: 0.15rem;
 	font-size: 0.75rem;
+	text-transform: uppercase;
 }
 
 .connector { /* possible shared style */
-	border-left: 1px solid rgb(255, 255, 255, 0.5);
+	border-left: thin solid rgb(255, 255, 255, 0.5);
 	height: 2rem;
 } 
 
@@ -106,10 +109,10 @@ body {
 	background-color: transparent;
 	border: 0;
 	color: white;
-	/* display: inline-block; */
+	font-size: 0.8rem;
 	padding: 1rem;
 	flex-grow: 1;
-	/* width: 100%; */
+	min-width: 10rem;
 }
 
 .navigation-link:not(:last-child) {
@@ -130,36 +133,61 @@ body {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	height: 90%;
+	height: fit-content;
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0;
 	transition: opacity 0.7s ease-in;
-	width: 85%;
-	padding: 1rem;
-	overflow: auto;
-	scrollbar-width: none;
-}
-
-.about::-webkit-scrollbar {
-	/* This is the magic bit for WebKit */
-	display: none;
+	width: 94%;
+	position: absolute;
+	top: 1rem;
 }
 
 .about--visible {
 	opacity: 1;
 }
 
+.about__close-button-wrapper {
+	padding: 0.8rem 0.8rem 0 0.8rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
 .about__close-button {
-	width: 4rem;
-	height: 4rem;
+	width: 2.2rem;
+	height: 2.2rem;
 	border-radius: 50%;
 	background-color: transparent;
 	border: none;
 	color: white;
 	font-size: 1.5rem;
+	font-weight: 300;
 	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 }
+
+.about__description-wrapper {
+	padding: 0 1.4rem 1rem 1.4rem;
+	overflow: auto;
+	scrollbar-width: none;
+}
+
+.about__description-wrapper::-webkit-scrollbar {
+	/* This is the magic bit for WebKit */
+	display: none;
+}
+
+.about__title {
+	border-bottom: 1px solid white;
+	width: max-content;
+	padding-bottom: 0.75rem;
+}
+
+
 
 .about__close-button:hover,
 .about__close-button:focus {
@@ -187,7 +215,7 @@ body {
 	}
 
 	.navigation-link {
-		min-width: 9rem;
+		font-size: 1rem;
 	}
 
 	.navigation-link:not(:last-child) {
@@ -205,13 +233,18 @@ body {
 	}
 
 	.logo {
-		height: 70px;
-		width: 70px;
+		height: 3rem;
+		width: 3rem;
 	}
 
 	.company-intro {
 		max-width: 60rem;
-		padding: 3rem 2rem;
+		padding: 4rem 3rem;
+	}
+
+	.company-intro__description {
+		letter-spacing: 0.25rem;
+		font-size: 1.15rem;
 	}
 
 	.connector {
@@ -219,9 +252,10 @@ body {
 	}
 
 	.about {
-		max-width: 80rem;
+		max-width: 60rem;
 		max-height: 60rem;
 		padding: 2rem 4rem;
+		top: 5rem;
 	}
 
 	.about__image {
