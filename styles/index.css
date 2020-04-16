@@ -11,6 +11,12 @@ body {
 	padding: 0;
 }
 
+.background-image-container {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+
 .background-image {
 	background-image: url("../images/desert_house.jpg");
 	background-position: 65% 50%;
@@ -66,8 +72,8 @@ body {
 }
 
 .logo {
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 }
 
 .company-intro {
@@ -89,15 +95,19 @@ body {
 .navigation-links {
 	border: 1px solid white;
 	text-align: center;
+	border-radius: 0.3rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .navigation-link {
 	background-color: transparent;
 	border: 0;
 	color: white;
-	display: block;
+	/* display: inline-block; */
 	padding: 1rem;
-	width: 100%;
+	flex-grow: 1;
+	/* width: 100%; */
 }
 
 .navigation-link:not(:last-child) {
@@ -125,6 +135,12 @@ body {
 	width: 90%;
 	padding: 2rem;
 	overflow: auto;
+	scrollbar-width: none;
+}
+
+.about::-webkit-scrollbar {
+	/* This is the magic bit for WebKit */
+	display: none;
 }
 
 .about p {
@@ -164,6 +180,10 @@ body {
 
 	.background-image {
 		/* background-position: 0 0; */
+	}
+
+	.navigation-links {
+		flex-direction: row;
 	}
 
 	.logo-wrapper {
