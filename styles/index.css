@@ -1,4 +1,5 @@
 @import url('./typography.css');
+@import url('./helpers.css');
 
 body {
 	align-items: center;
@@ -64,7 +65,7 @@ body {
 .logo-wrapper {
 	align-items: center;
 	border-radius: 50%;
-	border: 1px solid white;
+	border: 1px solid rgb(255, 255, 255, 0.5);
 	display: flex;
 	height: 4rem;
 	justify-content: center;
@@ -77,23 +78,21 @@ body {
 }
 
 .company-intro {
-	border-bottom: 1px solid white;
-	border-top: 1px solid white;
-	padding: 2rem 0;
+	border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+	border-top: 1px solid rgb(255, 255, 255, 0.5);
+	padding: 1rem 0;
 	text-align: center;
 }
 
-.company-intro__description {
-	line-height: 1.9rem;
-}
+.company-intro__description {}
 
 .connector { /* possible shared style */
-	border-left: 1px solid white;
+	border-left: 1px solid rgb(255, 255, 255, 0.5);
 	height: 2rem;
 } 
 
 .navigation-links {
-	border: 1px solid white;
+	border: 1px solid rgb(255, 255, 255, 0.5);
 	text-align: center;
 	border-radius: 0.3rem;
 	display: flex;
@@ -111,7 +110,7 @@ body {
 }
 
 .navigation-link:not(:last-child) {
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
 
 .navigation-link:hover,
@@ -133,7 +132,7 @@ body {
 	opacity: 0;
 	transition: opacity 0.7s ease-in;
 	width: 90%;
-	padding: 2rem;
+	padding: 0.5rem;
 	overflow: auto;
 	scrollbar-width: none;
 }
@@ -141,12 +140,6 @@ body {
 .about::-webkit-scrollbar {
 	/* This is the magic bit for WebKit */
 	display: none;
-}
-
-.about p {
-	line-height: 2.9rem;
-	font-size: 1.6rem;
-	font-weight: 300;
 }
 
 .about--visible {
@@ -186,18 +179,32 @@ body {
 		flex-direction: row;
 	}
 
+	.navigation-link {
+		min-width: 9rem;
+	}
+
+	.navigation-link:not(:last-child) {
+		border-bottom: none;
+		border-right: 1px solid rgb(255, 255, 255, 0.5);	
+	}
+
+	.content-wrapper {
+		top: 20%;
+	}
+
 	.logo-wrapper {
 		width: 8rem;
 		height: 8rem;
 	}
 
 	.logo {
-		height: 80px;
-		width: 80px;
+		height: 70px;
+		width: 70px;
 	}
 
 	.company-intro {
 		max-width: 60rem;
+		padding: 3rem 2rem;
 	}
 
 	.connector {

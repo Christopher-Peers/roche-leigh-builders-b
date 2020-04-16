@@ -1,0 +1,11 @@
+.helper-spacing__heading {
+	margin-top: 2rem;
+}
+
+.helper-spacing__paragraph {
+	margin-top: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+
+}
