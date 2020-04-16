@@ -6,6 +6,10 @@
 	margin-top: 1rem;
 }
 
+.helper-spacing__general {
+	margin-top: 1.5rem;
+}
+
 @media screen and (min-width: 480px) {
 
 }
