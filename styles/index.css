@@ -25,6 +25,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	transform: scale(1.1);
+
 }
 
 .background-image__overlay {
@@ -41,7 +42,7 @@ body {
 	height: 100vh;
 	justify-content: center;
 	left: 0;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	visibility: hidden;
 	width: 100vw;
@@ -54,10 +55,16 @@ body {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	opacity: 0;
+	/* opacity: 0; */
 	overflow: auto;
 	padding: 1rem;
 	position: absolute;
+	animation-name: expand-menu;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    transform: scaleY(0);
+    transform-origin: center;
 }
 
 .content-wrapper--hidden {
