@@ -1,21 +1,3 @@
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-out {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-}
-
 @keyframes fade-out-to-black {
 	0% {
 		background-color: white;
@@ -38,8 +20,38 @@
     }
 }
 
+
+@keyframes zoom {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
 .fade-out--black {
 	animation-name: fade-out-to-black;
 	animation-duration: 5000ms;
 	animation-fill-mode: forwards;
-}	
+}
+
+.exapnd-menu {
+	animation-name: expand-menu;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.zoom {
+	animation-name: zoom;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.zoom-out {
+	animation-name: zoom;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	animation-direction: reverse;
+}

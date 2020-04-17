@@ -24,8 +24,6 @@ body {
 	background-position: 65% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: scale(1.1);
-
 }
 
 .background-image__overlay {
@@ -50,21 +48,21 @@ body {
 	overflow: hidden;
 }
 
+.screen-overlay--visible {
+	visibility: visible;
+}
+
 .content-wrapper {
 	align-items: center;
 	color: white;
 	display: flex;
 	flex-direction: column;
-	/* opacity: 0; */
 	overflow: auto;
 	padding: 1rem;
 	position: absolute;
-	animation-name: expand-menu;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
     transform: scaleY(0);
-    transform-origin: center;
+	transform-origin: center;
+	visibility: visible;
 }
 
 .content-wrapper--hidden {
@@ -144,7 +142,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0;
-	transition: opacity 0.7s ease-in;
+	transition: opacity 0.4s ease-in;
 	width: 94%;
 	position: absolute;
 	top: 1rem;
