@@ -44,6 +44,41 @@
 		
 		</div>
 
+
+		<div class="recent-projects">
+
+			<div class="recent-projects__close-button-wrapper">
+				
+				<button class="recent-projects__close-button" onclick="closeModal()">
+					<svg viewBox="0 0 40 40" width="15px" height="15px">
+						<line x1="0" y1="40" x2="40" y2="0" stroke="white" stroke-width="2"></line>
+						<line x1="0" y1="0" x2="40" y2="40" stroke="white" stroke-width="2"></line>
+					</svg>
+				</button>
+
+			</div>
+
+			<div class="recent-projects__description-wrapper">
+
+				<h2 class="recent-projects__title">ABOUT US</h2>
+				<img class="recent-projects__image helper-spacing__general" src="./images/person-holding-grinder.jpg" alt="">
+				<p class="helper-spacing__general">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolorem ducimus, asperiores sapiente laboriosam sint ipsum harum tenetur et temporibus 
+					quod odio, nisi ipsam illo adipisci atque animi amet perferendis? Perspiciatis fugit natus commodi ut? Laborum, sapiente fuga! Dolores delectus fuga, 
+					porro cupiditate ratione voluptatem deserunt facere molestiae saepe distinctio!
+				</p>
+				<p class="helper-spacing__general">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, iusto laborum itaque eum accusamus saepe, culpa, vero labore ipsa neque aliquam voluptate 
+					earum molestias amet. Error sunt natus fugiat dolor non labore voluptas distinctio libero corporis iure! Dolorem harum error ex in deserunt tempora cumque 
+					voluptate accusamus reiciendis veniam, aperiam placeat ratione numquam quia nostrum sit molestiae voluptates laboriosam dolor magni aliquid illum! Optio repellat 
+					corrupti dolores nisi quaerat modi, odit ipsam dolorum quam aliquam accusantium iure libero similique vel ducimus aut alias natus eos animi fugiat magnam expedita. 
+					Quibusdam?
+				</p>
+	
+			</div>
+		
+		</div>
+
 	</div>
 
 	<div class="background-image-container">
@@ -55,7 +90,7 @@
 	</div>
 
 	
-	<div class="content-wrapper exapnd-menu">
+	<div class="content-wrapper exapnd-menu helper--visible">
 
 		<div class="logo-wrapper">
 
@@ -82,10 +117,10 @@
 
 		<div class="navigation-links">
 
-			<button class="navigation-link" onclick="openModal('about')">ABOUT</button>
-			<button class="navigation-link" onclick="openModal('recent-work')">RECENT WORK</button>
-			<button class="navigation-link">OUR SERVICES</button>
-			<button class="navigation-link">CONTACT</button>
+			<button class="navigation-link navigation-link--about">ABOUT</button>
+			<button class="navigation-link navigation-link--recent-projects">RECENT WORK</button>
+			<button class="navigation-link navigation-link--services">OUR SERVICES</button>
+			<button class="navigation-link navigation-link--contact">CONTACT</button>
 
 		</div>
 

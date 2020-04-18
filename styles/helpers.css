@@ -10,6 +10,14 @@
 	margin-top: 1.5rem;
 }
 
+.helper--hidden {
+	visibility: hidden;
+}
+
+.helper--visible {
+	visibility: visible;
+}
+
 @media screen and (min-width: 480px) {
 
 }
