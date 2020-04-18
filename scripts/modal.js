@@ -18,16 +18,7 @@ function openModal(elementId) {
 	hideContentWrapper();
 	showScreenOverlay();
 	displayCorrectModal(elementId);
-
-
-	if (backgroundImage.classList.contains('zoom-out')) {
-		backgroundImage.classList.remove('zoom-out');
-	};
-	backgroundImage.classList.add('zoom');
-
-	setTimeout(() => {
-		backgroundImage.style.filter = 'blur(6px)';
-	}, 650)
+	animateZoomOut();
 
 }
 
@@ -36,17 +27,10 @@ function closeModal(elementId) {
 	showContentWrapper();
 	hideCorrectModal(elementId);
 
-
-	backgroundImage.classList.remove('zoom');
-	backgroundImage.classList.add('zoom-out');
-
-	setTimeout(() => {
-		backgroundImage.style.filter = 'none';
-	}, 650)
+	animateZoomIn()
 }
 
 function displayCorrectModal(elementId) {
-	console.log(elementId);
 	switch (elementId) {
 		case "navigation-link--about":
 			showAbout();
@@ -128,4 +112,20 @@ function hideScreenOverlay() {
 function showScreenOverlay() {
 	screenOverlay.classList.remove('helper--hidden');
 	screenOverlay.classList.add('helper--visible');
+}
+
+function animateZoomIn() {
+	backgroundImage.classList.remove('zoom');
+	backgroundImage.classList.add('zoom-out');
+	setTimeout(() => {
+		backgroundImage.style.filter = 'none';
+	}, 650)
+}
+
+function animateZoomOut() {
+	backgroundImage.classList.remove('zoom-out');
+	backgroundImage.classList.add('zoom');
+	setTimeout(() => {
+		backgroundImage.style.filter = 'blur(6px)';
+	}, 650)
 }

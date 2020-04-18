@@ -39,6 +39,15 @@
 	}
 }
 
+@keyframes twirl {
+	from {
+		transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(90deg);
+	}
+}
+
 .fade-out--black {
 	animation-name: fade-out-to-black;
 	animation-duration: 5000ms;
