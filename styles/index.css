@@ -203,6 +203,34 @@ body {
 	
 }
 
+.recent-projects-cards {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.recent-project-card {
+	height: 280px;
+	width: 200px;
+	background-color: #1d1d1d;
+	border-radius: 0.65rem;
+	box-shadow: -0.3rem 0.2rem 0.6rem #0e0e0e;
+	position: relative;
+	transition: all 0.4s ease-out;
+}
+
+.recent-project-card:hover ~ .recent-project-card {
+	left: 50px;
+	position: relative;
+	transition: 0.4s ease-out;
+}
+
+.recent-project-card:hover,
+.recent-project-card:focus {
+	transform: translateY(-20px);
+	transition: 0.4s ease-out;
+}
+
 @media screen and (min-width: 480px) {
 
 	.background-image {
@@ -261,6 +289,16 @@ body {
 	.about__image,
 	.recent-projects__image {
 		height: 25rem;
+	}
+
+	.recent-projects-cards {
+		padding: 1rem;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.recent-project-card:not(:first-child) {
+		margin-left: -3rem;
 	}
 
 }
