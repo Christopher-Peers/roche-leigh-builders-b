@@ -10,6 +10,8 @@ const contentWrapper = document.getElementsByClassName('content-wrapper')[0];
 
 const about = document.getElementsByClassName('about')[0];
 const recentProjects = document.getElementsByClassName('recent-projects')[0];
+const contact = document.getElementsByClassName('contact')[0];
+
 
 navButtonList.forEach((navLink) => navLink.addEventListener('click', () => openModal(navLink.id)));
 closeButtonList.forEach((closeButton) => closeButton.addEventListener('click', () => closeModal(closeButton.id)))
@@ -26,8 +28,7 @@ function closeModal(elementId) {
 	hideScreenOverlay();
 	showContentWrapper();
 	hideCorrectModal(elementId);
-
-	animateZoomIn()
+	animateZoomIn();
 }
 
 function displayCorrectModal(elementId) {
@@ -56,11 +57,11 @@ function hideCorrectModal(elementId) {
 			hideRecentProjects();
 			break;
 		// case "navigation-link--services":
-		// 	showServices();
+		// 	hideServices();
 		// 	break;
-		// case "navigation-link--contact":
-		// 	showContactDetails();
-		// 	break;
+		case "navigation-link--contact":
+			hideContactDetails();
+			break;
 	}
 
 }
@@ -90,7 +91,17 @@ function hideRecentProjects() {
 
 function showServices() {}
 
-function showContactDetails() {}
+function hideServices() {}
+
+function showContactDetails() {
+	contact.classList.remove('helper--hidden');
+	contact.classList.add('helper--visible');
+}
+
+function hideContactDetails() {
+	contact.classList.remove('helper--visible');
+	contact.classList.add('helper--hidden');
+}
 
 // Modal overlay display functions
 
