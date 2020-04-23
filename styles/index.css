@@ -284,7 +284,7 @@ body {
 	text-align: center;
 }
 
-.contact-inputs {
+.contact-inputs-row {
 	display: flex;
 	flex-direction: column;
 }
@@ -292,16 +292,20 @@ body {
 .contact-input-wrapper {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
 .contact-input-wrapper--halved {
 	width: calc(50% - 1rem);
 }
 
-.contact-input-wrapper--halved input:first-of-type {
+.contact-inputs-row > .contact-input-wrapper--halved:first-of-type {
 	margin-right: 2rem;
 }
 
+.contact-inputs-row > button:first-of-type {
+	margin-right: 1rem;
+}
 
 .contact-input-wrapper > label {
 	margin-bottom: 1rem;
@@ -313,13 +317,56 @@ body {
 	letter-spacing: 0.2rem;
 }
 
-.contact__description-wrapper input {
-	height: 3.5rem;
-	background-color: rgba(27, 31, 34, 0.85);
+.contact__description-wrapper input,
+.contact__description-wrapper textarea  {
+	background-color: transparent;
 	border: 1px solid white;
-	border-radius: 0.4rem;
+	border-radius: 0.2rem;
 }
 
+.contact__description-wrapper input {
+	height: 3.5rem;
+}
+
+.contact__description-wrapper textarea {
+	height: 10rem;
+	width: 100%;
+}
+
+.contact-button {
+	height: 3.5rem;
+	border: 1px solid white;
+	border-radius: 0.4rem;
+	padding: 0 1.7rem;
+	color: white;
+	font-size: 0.9rem;
+	letter-spacing: 0.2rem;
+	font-weight: 400;
+}
+
+.contact-button--send {
+	background-color: white;
+	color: #333;
+}
+
+.contact-button--reset {
+	background-color: transparent;
+}
+
+.social-icon-wrapper {
+	height: 3rem;
+	width: 3rem;
+	border: 1px solid white;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icon-wrapper:not(:first-of-type) {
+	margin-left: 1rem;
+}
 
 @media screen and (min-width: 480px) {
 
@@ -395,7 +442,7 @@ body {
 		margin-left: 1rem;
 	}
 
-	.contact-inputs {
+	.contact-inputs-row {
 		flex-direction: row;
 		padding: 1rem 0;
 	}
