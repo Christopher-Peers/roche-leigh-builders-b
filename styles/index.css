@@ -368,6 +368,12 @@ body {
 	margin-left: 1rem;
 }
 
+.social-icon-wrapper:hover,
+.social-icon-wrapper:focus  {
+	background-color: rgba(255, 255, 255, 0.3); 
+	outline: none;
+}
+
 @media screen and (min-width: 480px) {
 
 	.navigation-links {
