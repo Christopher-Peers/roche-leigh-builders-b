@@ -465,6 +465,7 @@ body {
 	.contact__image,
 	.recent-projects__image {
 		height: 25rem;
+		margin: 3rem 0;
 	}
 
 	.recent-projects-cards {

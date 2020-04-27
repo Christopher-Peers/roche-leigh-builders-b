@@ -10,6 +10,10 @@
 	margin-top: 1.5rem;
 }
 
+.helper-spacing__large {
+	margin-top: 3rem;
+}
+
 .helper--hidden {
 	visibility: hidden;
 	display: none;
