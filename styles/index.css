@@ -127,6 +127,7 @@ body {
 }
 
 .about,
+.services,
 .recent-projects,
 .contact {
 	background-color: rgba(27, 31, 34, 0.85);
@@ -144,6 +145,7 @@ body {
 }
 
 .about__close-button-wrapper,
+.services__close-button-wrapper,
 .contact__close-button-wrapper,
 .recent-projects__close-button-wrapper {
 	padding: 0.8rem;
@@ -153,6 +155,7 @@ body {
 }
 
 .about__close-button,
+.services__close-button,
 .contact__close-button,
 .recent-projects__close-button {
 	width: 2.2rem;
@@ -171,6 +174,7 @@ body {
 }
 
 .about__description-wrapper,
+.services__description-wrapper,
 .contact__description-wrapper,
 .recent-projects__description-wrapper {
 	padding: 0 1.4rem 2rem 1.4rem;
@@ -179,6 +183,7 @@ body {
 }
 
 .about__description-wrapper::-webkit-scrollbar,
+.services__description-wrapper::-webkit-scrollbar,
 .contact__description-wrapper::-webkit-scrollbar,
 .recent-projects__description-wrapper::-webkit-scrollbar {
 	/* This is the magic bit for WebKit */
@@ -186,6 +191,7 @@ body {
 }
 
 .about__title,
+.services__title,
 .contact__title,
 .recent-projects__title {
 	border-bottom: 1px solid white;
@@ -195,6 +201,8 @@ body {
 
 .about__close-button:hover,
 .about__close-button:focus,
+.services__close-button:hover,
+.services__close-button:focus,
 .contact__close-button:hover,
 .contact__close-button:focus,
 .recent-projects__close-button:hover,
@@ -204,6 +212,7 @@ body {
 }
 
 .about__image,
+.services__image,
 .contact__image {
 	border-radius: 0.3rem;
 	height: 8rem;
@@ -418,6 +427,7 @@ body {
 
 	.about,
 	.contact,
+	.services,
 	.recent-projects {
 		max-width: 60rem;
 		max-height: 60rem;
@@ -426,6 +436,7 @@ body {
 	}
 
 	.about__description-wrapper,
+	.services__description-wrapper,
 	.contact__description-wrapper,
 	.recent-projects__description-wrapper {
 		padding: 0 1.4rem 1rem 1.4rem;
@@ -434,12 +445,14 @@ body {
 	}
 
 	.about__close-button-wrapper,
+	.services__close-button-wrapper,
 	.contact__close-button-wrapper,
 	.recent-projects__close-button-wrapper {
 		padding: 0 0 0.8rem 0;
 	}
 
 	.about__image,
+	.services__image,
 	.contact__image,
 	.recent-projects__image {
 		height: 25rem;

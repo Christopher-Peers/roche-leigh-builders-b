@@ -10,6 +10,7 @@ const contentWrapper = document.getElementsByClassName('content-wrapper')[0];
 
 const about = document.getElementsByClassName('about')[0];
 const recentProjects = document.getElementsByClassName('recent-projects')[0];
+const services = document.getElementsByClassName('services')[0];
 const contact = document.getElementsByClassName('contact')[0];
 
 
@@ -56,10 +57,10 @@ function hideCorrectModal(elementId) {
 		case "recent-projects__close-button":
 			hideRecentProjects();
 			break;
-		// case "navigation-link--services":
-		// 	hideServices();
-		// 	break;
-		case "navigation-link--contact":
+		case "services__close-button":
+			hideServices();
+			break;
+		case "contact__close-button":
 			hideContactDetails();
 			break;
 	}
@@ -89,9 +90,15 @@ function hideRecentProjects() {
 	recentProjects.classList.add('helper--hidden');
 }
 
-function showServices() {}
+function showServices() {
+	services.classList.remove('helper--hidden');
+	services.classList.add('helper--visible');
+}
 
-function hideServices() {}
+function hideServices() {
+	services.classList.remove('helper--visible');
+	services.classList.add('helper--hidden');
+}
 
 function showContactDetails() {
 	contact.classList.remove('helper--hidden');
