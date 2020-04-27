@@ -61,7 +61,7 @@ body {
 	position: absolute;
     transform: scaleY(0);
 	transform-origin: center;
-	top: 5%;
+	top: auto;
 }
 
 .logo-wrapper {
@@ -110,7 +110,7 @@ body {
 	border: 0;
 	color: white;
 	font-size: 0.8rem;
-	padding: 1rem;
+	padding: 0.6rem;
 	flex-grow: 1;
 	min-width: 10rem;
 }
@@ -399,6 +399,7 @@ body {
 
 	.navigation-link {
 		font-size: 1rem;
+		padding: 1rem;
 	}
 
 	.navigation-link:not(:last-child) {
