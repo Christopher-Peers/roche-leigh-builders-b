@@ -133,12 +133,11 @@ body {
 	background-color: rgba(27, 31, 34, 0.85);
 	border-radius: 0.3rem;
 	color: white;
-	display: flex;
 	flex-direction: column;
 	height: fit-content;
 	margin-left: auto;
 	margin-right: auto;
-	transition: opacity 0.4s ease-in;
+	transition: opacity 0.4s ease-in 0.1s;
 	width: 94%;
 	position: absolute;
 	top: 1rem;
@@ -221,6 +220,11 @@ body {
 	width: 100%;
 }
 
+
+.services__image {
+	object-position: center 80%;
+}
+
 .recent-projects-cards {
 	align-items: center;
 	display: flex;
@@ -230,7 +234,11 @@ body {
 .recent-project-card {
 	height: 18rem;
 	position: relative;
-	width: 14rem;
+	width: 100%;
+}
+
+.recent-project-card:not(:first-child) {
+	margin-top: 1rem;
 }
 
 .recent-project-card:hover .recent-project-card__front {
@@ -464,7 +472,12 @@ body {
 		justify-content: center;
 	}
 
+	.recent-project-card {
+		width: 14rem;
+	}
+
 	.recent-project-card:not(:first-child) {
+		margin-top: 0;
 		margin-left: 1rem;
 	}
 

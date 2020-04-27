@@ -12,11 +12,13 @@
 
 .helper--hidden {
 	visibility: hidden;
+	display: none;
 }
 
 .helper--visible {
 	visibility: visible;
 	opacity: 1;
+	display: flex;
 }
 
 @media screen and (min-width: 480px) {
